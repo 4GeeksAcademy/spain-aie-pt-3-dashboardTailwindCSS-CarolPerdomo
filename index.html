@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseOps Dashboard</title>
+    <meta
+      name="description"
+      content="Dashboard operacional construido con HTML semántico y Tailwind CSS v4."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body class="min-h-screen bg-linear-to-br from-sand-50 via-white to-mint-300/25 text-ink-950 antialiased">
+    <div class="mx-auto flex min-h-screen max-w-7xl flex-col px-4 py-4 sm:px-6 sm:py-6 lg:flex-row lg:px-8 lg:py-8">
+      <aside class="mb-4 rounded-[2rem] bg-ink-950 px-5 py-6 text-sand-50 shadow-xl shadow-ink-950/20 lg:sticky lg:top-8 lg:mb-0 lg:flex lg:w-72 lg:flex-col lg:justify-between lg:px-6 lg:py-7">
+        <div>
+          <header class="flex items-center justify-between lg:block">
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-mint-300">PulseOps</p>
+              <h1 class="mt-2 text-2xl font-semibold">Control diario</h1>
+            </div>
+            <span class="rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-sand-100">Live</span>
+          </header>
+
+          <nav aria-label="Principal" class="mt-6">
+            <ul class="grid gap-2 sm:grid-cols-3 lg:grid-cols-1">
+              <li>
+                <a href="#kpis" class="flex items-center justify-between rounded-2xl bg-white/8 px-4 py-3 text-sm font-medium text-white transition hover:bg-white/12">
+                  Rendimiento
+                  <span class="text-mint-300">01</span>
+                </a>
+              </li>
+              <li>
+                <a href="#drivers" class="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium text-sand-100/80 transition hover:bg-white/8 hover:text-white">
+                  Drivers
+                  <span class="text-sand-100/50">02</span>
+                </a>
+              </li>
+              <li>
+                <a href="#operacion" class="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium text-sand-100/80 transition hover:bg-white/8 hover:text-white">
+                  Operación
+                  <span class="text-sand-100/50">03</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <section class="mt-6 rounded-[1.5rem] border border-white/10 bg-white/8 p-4">
+          <p class="text-xs uppercase tracking-[0.25em] text-mint-300">Turno actual</p>
+          <p class="mt-3 text-3xl font-semibold">06:00 - 14:00</p>
+          <p class="mt-2 text-sm text-sand-100/70">Equipo de fulfilment operando al 97% de cobertura.</p>
+        </section>
+      </aside>
+
+      <main class="flex-1 lg:pl-6">
+        <header class="rounded-[2rem] border border-white/60 bg-white/80 p-5 shadow-lg shadow-ink-950/5 backdrop-blur sm:p-6">
+          <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-xs font-medium uppercase tracking-[0.3em] text-ink-900/60">Resumen operativo</p>
+              <h2 class="mt-2 max-w-2xl text-3xl font-semibold tracking-tight text-ink-950 sm:text-4xl">Dashboard de distribución con foco en throughput, SLA y productividad por turno.</h2>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-2 md:flex md:flex-wrap md:justify-end">
+              <div class="rounded-2xl border border-ink-950/10 bg-sand-50 px-4 py-3">
+                <p class="text-xs uppercase tracking-[0.25em] text-ink-900/50">Hub</p>
+                <p class="mt-1 text-sm font-semibold">Madrid Norte</p>
+              </div>
+              <div class="rounded-2xl border border-ink-950/10 bg-sand-50 px-4 py-3">
+                <p class="text-xs uppercase tracking-[0.25em] text-ink-900/50">Fecha</p>
+                <p class="mt-1 text-sm font-semibold">14 Jun 2026</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section id="kpis" aria-labelledby="kpis-title" class="mt-5">
+          <div class="mb-3 flex items-center justify-between">
+            <div>
+              <p class="text-xs font-medium uppercase tracking-[0.28em] text-ink-900/55">Bloque superior</p>
+              <h3 id="kpis-title" class="text-xl font-semibold text-ink-950">KPIs clave</h3>
+            </div>
+          </div>
+
+          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="rounded-[1.75rem] border border-white/70 bg-white/85 p-5 shadow-lg shadow-ink-950/5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-ink-900/60">Pedidos procesados</p>
+                  <p class="mt-4 text-4xl font-semibold tracking-tight">12.480</p>
+                </div>
+                <span class="rounded-full bg-mint-300/35 px-3 py-1 text-xs font-semibold text-ink-950">+8,4%</span>
+              </div>
+              <p class="mt-4 text-sm text-ink-900/65">Ritmo superior al promedio de las últimas 4 semanas.</p>
+              <div class="mt-5 h-2 rounded-full bg-sand-100">
+                <div class="h-2 w-4/5 rounded-full bg-ink-950"></div>
+              </div>
+            </article>
+
+            <article class="rounded-[1.75rem] border border-white/70 bg-ink-950 p-5 text-sand-50 shadow-lg shadow-ink-950/15">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-sand-100/70">SLA expedición</p>
+                  <p class="mt-4 text-4xl font-semibold tracking-tight">96,2%</p>
+                </div>
+                <span class="rounded-full bg-mint-300 px-3 py-1 text-xs font-semibold text-ink-950">Objetivo +1,2</span>
+              </div>
+              <p class="mt-4 text-sm text-sand-100/70">El cuello de botella de picking bajó 11 minutos respecto a ayer.</p>
+              <div class="mt-5 grid grid-cols-4 gap-2">
+                <span class="h-10 rounded-2xl bg-white/8"></span>
+                <span class="h-16 rounded-2xl bg-white/12"></span>
+                <span class="h-12 rounded-2xl bg-mint-300/70"></span>
+                <span class="h-20 rounded-2xl bg-white/18"></span>
+              </div>
+            </article>
+
+            <article class="rounded-[1.75rem] border border-white/70 bg-white/85 p-5 shadow-lg shadow-ink-950/5 md:col-span-2 xl:col-span-1">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-ink-900/60">Coste por envío</p>
+                  <p class="mt-4 text-4xl font-semibold tracking-tight">€4,18</p>
+                </div>
+                <span class="rounded-full bg-coral-400/20 px-3 py-1 text-xs font-semibold text-ink-950">-0,32€</span>
+              </div>
+              <p class="mt-4 text-sm text-ink-900/65">La consolidación de rutas mantuvo el gasto variable bajo control.</p>
+              <dl class="mt-5 grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-2xl bg-sand-50 p-3">
+                  <dt class="text-ink-900/55">Picking</dt>
+                  <dd class="mt-1 font-semibold">€1,24</dd>
+                </div>
+                <div class="rounded-2xl bg-sand-50 p-3">
+                  <dt class="text-ink-900/55">Transporte</dt>
+                  <dd class="mt-1 font-semibold">€2,94</dd>
+                </div>
+              </dl>
+            </article>
+          </div>
+        </section>
+
+        <section id="drivers" aria-labelledby="drivers-title" class="mt-6">
+          <div class="mb-3">
+            <p class="text-xs font-medium uppercase tracking-[0.28em] text-ink-900/55">Bloque intermedio</p>
+            <h3 id="drivers-title" class="text-xl font-semibold text-ink-950">Drivers operacionales</h3>
+          </div>
+
+          <div class="grid gap-4 lg:grid-cols-3">
+            <article class="rounded-[1.75rem] border border-white/70 bg-white/85 p-5 shadow-lg shadow-ink-950/5">
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-semibold">Velocidad de picking</h4>
+                <span class="rounded-full bg-sky-400/20 px-3 py-1 text-xs font-semibold text-ink-950">112 u/h</span>
+              </div>
+              <ul class="mt-5 space-y-3 text-sm text-ink-900/75">
+                <li class="rounded-2xl bg-sand-50 p-3">
+                  <div class="flex justify-between gap-3">
+                    <span>Zona A</span>
+                    <span class="font-semibold">92%</span>
+                  </div>
+                  <div class="mt-2 h-2 rounded-full bg-white">
+                    <div class="h-2 w-11/12 rounded-full bg-ink-950"></div>
+                  </div>
+                </li>
+                <li class="rounded-2xl bg-sand-50 p-3">
+                  <div class="flex justify-between gap-3">
+                    <span>Zona B</span>
+                    <span class="font-semibold">84%</span>
+                  </div>
+                  <div class="mt-2 h-2 rounded-full bg-white">
+                    <div class="h-2 w-5/6 rounded-full bg-ink-950"></div>
+                  </div>
+                </li>
+                <li class="rounded-2xl bg-sand-50 p-3">
+                  <div class="flex justify-between gap-3">
+                    <span>Zona C</span>
+                    <span class="font-semibold">77%</span>
+                  </div>
+                  <div class="mt-2 h-2 rounded-full bg-white">
+                    <div class="h-2 w-3/4 rounded-full bg-ink-950"></div>
+                  </div>
+                </li>
+              </ul>
+            </article>
+
+            <article class="rounded-[1.75rem] border border-white/70 bg-white/85 p-5 shadow-lg shadow-ink-950/5">
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-semibold">Capacidad por franja</h4>
+                <span class="rounded-full bg-gold-300/45 px-3 py-1 text-xs font-semibold text-ink-950">87%</span>
+              </div>
+              <dl class="mt-5 space-y-4 text-sm">
+                <div>
+                  <div class="flex justify-between text-ink-900/70">
+                    <dt>06:00 - 09:00</dt>
+                    <dd>74%</dd>
+                  </div>
+                  <div class="mt-2 h-3 rounded-full bg-sand-100">
+                    <div class="h-3 w-3/4 rounded-full bg-sky-400"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-ink-900/70">
+                    <dt>09:00 - 12:00</dt>
+                    <dd>88%</dd>
+                  </div>
+                  <div class="mt-2 h-3 rounded-full bg-sand-100">
+                    <div class="h-3 w-10/12 rounded-full bg-mint-500"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="flex justify-between text-ink-900/70">
+                    <dt>12:00 - 14:00</dt>
+                    <dd>97%</dd>
+                  </div>
+                  <div class="mt-2 h-3 rounded-full bg-sand-100">
+                    <div class="h-3 w-full rounded-full bg-coral-400"></div>
+                  </div>
+                </div>
+              </dl>
+            </article>
+
+            <article class="rounded-[1.75rem] border border-white/70 bg-ink-900 p-5 text-sand-50 shadow-lg shadow-ink-950/15">
+              <div class="flex items-center justify-between">
+                <h4 class="text-lg font-semibold">Incidencias activas</h4>
+                <span class="rounded-full bg-coral-400 px-3 py-1 text-xs font-semibold text-ink-950">7 abiertas</span>
+              </div>
+              <ul class="mt-5 space-y-3 text-sm text-sand-100/80">
+                <li class="rounded-2xl border border-white/10 px-4 py-3">
+                  Retraso en muelle 3
+                  <span class="mt-1 block text-xs uppercase tracking-[0.2em] text-mint-300">ETA +18 min</span>
+                </li>
+                <li class="rounded-2xl border border-white/10 px-4 py-3">
+                  Reposición baja en frío
+                  <span class="mt-1 block text-xs uppercase tracking-[0.2em] text-mint-300">12 pallets pendientes</span>
+                </li>
+                <li class="rounded-2xl border border-white/10 px-4 py-3">
+                  Saturación en packing
+                  <span class="mt-1 block text-xs uppercase tracking-[0.2em] text-mint-300">2 líneas por encima del 95%</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="operacion" aria-labelledby="operacion-title" class="mt-6 pb-4">
+          <div class="mb-3">
+            <p class="text-xs font-medium uppercase tracking-[0.28em] text-ink-900/55">Bloque inferior</p>
+            <h3 id="operacion-title" class="text-xl font-semibold text-ink-950">Detalle operacional</h3>
+          </div>
+
+          <div class="grid gap-4 xl:grid-cols-[1.4fr_0.9fr]">
+            <article class="overflow-hidden rounded-[1.75rem] border border-white/70 bg-white/85 shadow-lg shadow-ink-950/5">
+              <div class="flex items-center justify-between border-b border-ink-950/8 px-5 py-4">
+                <div>
+                  <h4 id="rutas-title" class="text-lg font-semibold">Estado por ruta</h4>
+                  <p class="text-sm text-ink-900/60">Seguimiento de las próximas salidas.</p>
+                </div>
+                <span class="rounded-full bg-sand-100 px-3 py-1 text-xs font-medium text-ink-900">12 rutas</span>
+              </div>
+              <ul aria-labelledby="rutas-title" class="grid gap-3 p-4 md:hidden">
+                <li class="rounded-2xl bg-sand-50 p-4">
+                  <div class="flex items-center justify-between gap-3">
+                    <p class="font-semibold text-ink-950">R-204</p>
+                    <span class="rounded-full bg-mint-300/35 px-3 py-1 text-xs font-semibold text-ink-950">On time</span>
+                  </div>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-sm text-ink-900/70">
+                    <div>
+                      <dt class="text-xs uppercase tracking-[0.2em] text-ink-900/45">Destino</dt>
+                      <dd class="mt-1 font-medium text-ink-950">Centro</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs uppercase tracking-[0.2em] text-ink-900/45">Carga</dt>
+                      <dd class="mt-1 font-medium text-ink-950">91%</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="rounded-2xl bg-sand-50 p-4">
+                  <div class="flex items-center justify-between gap-3">
+                    <p class="font-semibold text-ink-950">R-128</p>
+                    <span class="rounded-full bg-gold-300/55 px-3 py-1 text-xs font-semibold text-ink-950">Buffer</span>
+                  </div>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-sm text-ink-900/70">
+                    <div>
+                      <dt class="text-xs uppercase tracking-[0.2em] text-ink-900/45">Destino</dt>
+                      <dd class="mt-1 font-medium text-ink-950">Corredor Este</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs uppercase tracking-[0.2em] text-ink-900/45">Carga</dt>
+                      <dd class="mt-1 font-medium text-ink-950">84%</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="rounded-2xl bg-sand-50 p-4">
+                  <div class="flex items-center justify-between gap-3">
+                    <p class="font-semibold text-ink-950">R-087</p>
+                    <span class="rounded-full bg-coral-400/25 px-3 py-1 text-xs font-semibold text-ink-950">At risk</span>
+                  </div>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-sm text-ink-900/70">
+                    <div>
+                      <dt class="text-xs uppercase tracking-[0.2em] text-ink-900/45">Destino</dt>
+                      <dd class="mt-1 font-medium text-ink-950">Sierra Norte</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs uppercase tracking-[0.2em] text-ink-900/45">Carga</dt>
+                      <dd class="mt-1 font-medium text-ink-950">97%</dd>
+                    </div>
+                  </dl>
+                </li>
+                <li class="rounded-2xl bg-sand-50 p-4">
+                  <div class="flex items-center justify-between gap-3">
+                    <p class="font-semibold text-ink-950">R-301</p>
+                    <span class="rounded-full bg-sky-400/20 px-3 py-1 text-xs font-semibold text-ink-950">Loading</span>
+                  </div>
+                  <dl class="mt-3 grid grid-cols-2 gap-3 text-sm text-ink-900/70">
+                    <div>
+                      <dt class="text-xs uppercase tracking-[0.2em] text-ink-900/45">Destino</dt>
+                      <dd class="mt-1 font-medium text-ink-950">Sur logístico</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs uppercase tracking-[0.2em] text-ink-900/45">Carga</dt>
+                      <dd class="mt-1 font-medium text-ink-950">76%</dd>
+                    </div>
+                  </dl>
+                </li>
+              </ul>
+              <div class="hidden md:block">
+                <table aria-labelledby="rutas-title" class="min-w-full text-left text-sm">
+                  <thead class="bg-sand-50 text-ink-900/60">
+                    <tr>
+                      <th scope="col" class="px-5 py-3 font-medium">Ruta</th>
+                      <th scope="col" class="px-5 py-3 font-medium">Destino</th>
+                      <th scope="col" class="px-5 py-3 font-medium">Carga</th>
+                      <th scope="col" class="px-5 py-3 font-medium">Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-ink-950/8 text-ink-950">
+                    <tr>
+                      <td class="px-5 py-4 font-semibold">R-204</td>
+                      <td class="px-5 py-4">Centro</td>
+                      <td class="px-5 py-4">91%</td>
+                      <td class="px-5 py-4"><span class="rounded-full bg-mint-300/35 px-3 py-1 text-xs font-semibold">On time</span></td>
+                    </tr>
+                    <tr>
+                      <td class="px-5 py-4 font-semibold">R-128</td>
+                      <td class="px-5 py-4">Corredor Este</td>
+                      <td class="px-5 py-4">84%</td>
+                      <td class="px-5 py-4"><span class="rounded-full bg-gold-300/55 px-3 py-1 text-xs font-semibold">Buffer</span></td>
+                    </tr>
+                    <tr>
+                      <td class="px-5 py-4 font-semibold">R-087</td>
+                      <td class="px-5 py-4">Sierra Norte</td>
+                      <td class="px-5 py-4">97%</td>
+                      <td class="px-5 py-4"><span class="rounded-full bg-coral-400/25 px-3 py-1 text-xs font-semibold">At risk</span></td>
+                    </tr>
+                    <tr>
+                      <td class="px-5 py-4 font-semibold">R-301</td>
+                      <td class="px-5 py-4">Sur logístico</td>
+                      <td class="px-5 py-4">76%</td>
+                      <td class="px-5 py-4"><span class="rounded-full bg-sky-400/20 px-3 py-1 text-xs font-semibold">Loading</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="rounded-[1.75rem] border border-white/70 bg-white/85 p-5 shadow-lg shadow-ink-950/5">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="text-lg font-semibold">Checklist del turno</h4>
+                  <p class="text-sm text-ink-900/60">Tareas críticas y próximos hitos.</p>
+                </div>
+                <span class="rounded-full bg-ink-950 px-3 py-1 text-xs font-semibold text-sand-50">5 items</span>
+              </div>
+              <ol class="mt-5 space-y-3 text-sm text-ink-900/75">
+                <li class="rounded-2xl bg-sand-50 px-4 py-3">Cerrar reposición de cámaras antes de las 09:40.</li>
+                <li class="rounded-2xl bg-sand-50 px-4 py-3">Reasignar 2 operarios a packing desde cross-docking.</li>
+                <li class="rounded-2xl bg-sand-50 px-4 py-3">Confirmar disponibilidad de transporte para ruta R-087.</li>
+                <li class="rounded-2xl bg-sand-50 px-4 py-3">Validar inventario cíclico de referencias top 20.</li>
+                <li class="rounded-2xl bg-sand-50 px-4 py-3">Actualizar forecast de corte para el turno tarde.</li>
+              </ol>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

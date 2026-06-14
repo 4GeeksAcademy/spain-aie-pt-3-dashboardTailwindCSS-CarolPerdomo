@@ -1,0 +1,13 @@
+{
+  "name": "spain-aie-pt-3-dashboard-tailwindcss-carolperdomo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./styles.css -o ./dist/output.css --minify",
+    "watch:css": "tailwindcss -i ./styles.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.10",
+    "tailwindcss": "^4.1.10"
+  }
+}
